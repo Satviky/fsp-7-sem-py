@@ -7,3 +7,6 @@ July, 18...2025
 This was smooth
 
 ## longest sequence.
+Wrote in leetcode... and copied the same code here... lol!
+
+i feel lazy writing same code again and again in different places
