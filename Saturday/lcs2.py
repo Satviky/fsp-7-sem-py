@@ -1,3 +1,5 @@
+# i was not able to come up with sol ... i wrote what teacher wrote.
+
 class Solution(object):
     def longestCommonSubsequence(self, text1, text2):
         """
