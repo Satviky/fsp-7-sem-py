@@ -1,4 +1,7 @@
 # Day 1
+>[!warning]
+> this is not maintained and checked and my laptop was messing up on the days this folder was being made.
+
 ## Data Structure
 Way to store data in the memory of a computer.
 Important:
