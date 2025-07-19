@@ -20,3 +20,4 @@ class Solution(object):
                 dp[i][j] = q
         for i in range(len(dp)): print(dp[i])
         return dp[lentext1][lentext2]
+print(Solution().longestCommonSubsequence("GXTXTAB", "AGGTAB"))
