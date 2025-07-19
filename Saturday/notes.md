@@ -18,15 +18,8 @@ Not pasting the code here as there are two ways i solved the problem. Lik to sol
 ## Keyboard rows
 
 ```py
-# ignore the hash it was just me trying to try some not gonna work things.
-# leetcode link: https://leetcode.com/problems/keyboard-row/description/
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
-        # arr1=[q,w,e,r,t,y,u,i,o,p,,Q,W,E,R,T,Y,U,I,O,P]
-        # arr2=[a,s,d,f,g,h,j,k,l,A,S,D,F,G,H,J,K,L]
-        # arr3=[z,x,c,v,b,n,m,Z,X,C,V,B,N,M]
-        
-        # r1,r2,r3={'qwertyuiop'},{'asdfghjkl'},{'zxcvbnm'}
         r1= set('qwertyuiop')
         r2=set('asdfghjkl')
         r3=set('zxcvbnm')
@@ -36,9 +29,7 @@ class Solution:
             if w.issubset(r1) or w.issubset(r2) or w.issubset(r3):
                 v_word.append(word)
         return v_word
-        
-
-        ```
+```
 
 ## Climbing Stairs
 ```py
@@ -57,5 +48,23 @@ class Solution:
 
         dp = [-1]* (n+1)
         return ways(n,dp)
+ ```
 
-        ```
+## LCS
+1. [solution 1](/Saturday/lcs1.py)
+2. [solution 2](/Saturday/lcs2.py)
+
+## Min path sum
+```py
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        for i in range (len(grid)):
+            for j in range(len(grid[0])):
+                if i>0 and j>0:
+                    grid[i][j] = min(grid[i][j] + grid[i-1][j], grid[i][j] + grid[i][j-1])
+                elif i>0 :
+                    grid[i][j] += grid[i-1][j]
+                elif j>0:
+                    grid[i][j] += grid[i][j-1]
+        return grid[-1][-1]
+```
