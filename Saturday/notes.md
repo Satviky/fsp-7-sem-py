@@ -68,3 +68,6 @@ class Solution:
                     grid[i][j] += grid[i][j-1]
         return grid[-1][-1]
 ```
+
+## Wines Problem
+Greedy approach won't work for this approach
